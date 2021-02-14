@@ -3,7 +3,6 @@
 
 matrix create_empty(int rdim, int cdim)
 {
-  int i;
   matrix result;
   /* assign values to the row_dim and col_dim structure members */
   result.row_dim = rdim;
@@ -24,6 +23,7 @@ matrix create_initval(int rdim, int cdim, T val)
       result.element[i][j] = val;
   return result;
 }
+
 
 matrix create_initvals(int rdim, int cdim, T* initval)
 {
@@ -132,3 +132,24 @@ void equate(matrix* m1, matrix* m2)
     for (j=0; j<m1->col_dim; j++)
       m2->element[i][j] = m1->element[i][j];
 }
+
+//My transpose function
+matrix matrix_transpose(matrix m){
+	int i,j;
+	matrix result;
+	result = create_empty(m.row_dim, m.col_dim);
+	for(i=0;i<m.row_dim;i++){
+		for(j=0;j<m.col_dim;j++){
+			result.element[j][i]=m.element[i][j];
+		}
+	}
+	return result;
+}
+
+
+
+
+
+
+
+

@@ -1,25 +1,15 @@
-# Specify compiler
 CC=gcc
- 
-# Specify linker
-LINK=gcc
- 
-.PHONY : all
-all : app
- 
-# Link the object files into a binary
-app : matrix_static.o test_static.o
-    $(LINK) -o app test_static.o matrix_static.o -o run
- 
-# Compile the source files into object files
-test_static.o : test_static.c matrix_static.h
-    $(CC) -c test_static.c -o test_static
+CFLAGS= -g -Wall
 
-matrix_static.o : matrix_static.cpp matrix_static.hpp
-	$(CC) -c test_static.c -o test_static
+all : matrix_static.o main.o
+	$(CC) $(CFLAGS) matrix_static.o main.o -o run
  
-# Clean target
-.PHONY : clean
-clean :
-    rm *.o app 
-	rm run
+main.o : main.c matrix_static.h
+	$(CC) $(CFLAGS) -c main.c
+
+matrix_static.o : matrix_static.c matrix_static.h
+	$(CC) $(CFLAGS) -c matrix_static.c
+
+ 
+clean:
+	$(RM) all *.o*~ 

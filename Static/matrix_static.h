@@ -3,7 +3,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <assert.h>
-#define FORMAT "%8.3lf"
+#define FORMAT "%8d"
 #define MAX_ROW 10
 #define MAX_COL 10
 
@@ -17,6 +17,7 @@ typedef struct {
 /* function prototypes */
 matrix create_empty(int rdim, int cdim);
 matrix create_initval(int rdim, int cdim, T val);
+matrix create_input(int rdim, int cdim, T val);
 matrix create_initvals(int rdim, int cdim, T* initval);
 void destroy(matrix);
 void matrix_print(matrix);
@@ -30,4 +31,6 @@ matrix multiply(matrix, matrix);
 matrix scalar_multiply(T scalar, matrix);
 /* remaining function prototypes not shown */
 
+//My function
+matrix matrix_transpose(matrix);
 #endif
