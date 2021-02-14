@@ -1,0 +1,20 @@
+#Dynamic
+Number of rows'
+2
+Number of columns
+2
+Insert the value of your matrix pls
+Enter the elements a11: 15
+Enter the elements a12: 24
+Enter the elements a21: 89
+Enter the elements a22: 32
+
+Matrix a:
+
+      15      24
+      89      32
+
+Transpose of a:
+
+      15      89
+      24      32
