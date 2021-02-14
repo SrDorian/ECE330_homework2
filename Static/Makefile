@@ -12,4 +12,5 @@ matrix_static.o : matrix_static.c matrix_static.h
 
  
 clean:
-	$(RM) all *.o*~ 
+	$(RM)  *.o $(objects)
+	$(RM) run	
