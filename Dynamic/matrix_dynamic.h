@@ -3,13 +3,13 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <assert.h>
-#define FORMAT "%8.3lf"
+#define FORMAT "%8d"
 
 typedef int T;
 
 typedef struct {
   int  row_dim, col_dim;
-  T** element;
+  T** element;	
 } matrix;
 
 /* function prototypes */
@@ -28,4 +28,6 @@ matrix multiply(matrix, matrix);
 matrix scalar_multiply(T scalar, matrix);
 /* remaining function prototypes not shown */
 
+/*Transpose function*/
+matrix matrix_transpose(matrix);
 #endif
