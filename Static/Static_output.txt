@@ -1,0 +1,27 @@
+#Static output
+Number of rows
+3
+Number of columns
+3
+Insert the value of your matrix pls
+Enter the elements a11: 11
+Enter the elements a12: 22
+Enter the elements a13: 33
+Enter the elements a21: 44
+Enter the elements a22: 55
+Enter the elements a23: 66
+Enter the elements a31: 77
+Enter the elements a32: 88
+Enter the elements a33: 99
+
+Matrix a:
+
+      11      22      33
+      44      55      66
+      77      88      99
+
+Transpose of a:
+
+      11      44      77
+      22      55      88
+      33      66      99
